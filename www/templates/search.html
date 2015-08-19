@@ -1,0 +1,40 @@
+<ion-header-bar class="bar-light">
+  <h1 class="title">Dias</h1>
+  <div class="buttons">
+    <button class="button" ng-click="units('metric')">Cº</button>
+	<button class="button" ng-click="units('imperial')">Fº</button>
+	<button class="button" ng-click="units('kelvin')">Kº</button>
+  </div>
+</ion-header-bar>
+<ion-content>
+  <div class="row" align="center">
+	  <div class="col col-33 col-offset-33">
+		<h3>{{ciudad}}</h3>
+	  </div>
+</div>
+	 
+
+    <div class="list list-inset">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon" ></i>
+    <input type="text" placeholder="Search" ng-model="mySelect" ng-change="city(mySelect)">
+  </label>
+</div>
+	</div>
+	<div class="row" align="center">
+	  <div class="col">
+		<h5>{{descripcion}}</h5>
+	  </div>
+	</div>
+	<div class="row" align="center">
+	  <div class="col">
+		<h1>{{temperatura}}º</h1>
+	  </div>
+	</div>
+	<ion-list>
+      <ion-item ng-repeat="item in items">
+		<div class="row" align="center">
+		  <div class="col">{{item.dt*1000 | date}}</div>
+		  
+    </ion-list>
+</ion-content>
